@@ -3,7 +3,7 @@
     <div>
       <div class="title">热销推荐</div>
       <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <li class="item border-bottom" v-for="item of list" :key="item.id">
           <img class="item-img" :src="item.imgUrl" alt="">
           <div class="item-info">
             <p class="item-title">{{item.title}}</p>
@@ -19,25 +19,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1801/5d/5d24bb249f8ca889a3.water.jpg_200x200_77551cb9.jpg',
-        title: '澳门水舞间演出',
-        desc: '澳门特别行政区凼仔岛氹连贯公路新濠天地水舞间剧院'
-      }, {
-        id: '002',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1801/5d/5d24bb249f8ca889a3.water.jpg_200x200_77551cb9.jpg',
-        title: '澳门水舞间演出',
-        desc: '澳门特别行政区凼仔岛氹连贯公路新濠天地水舞间剧院'
-      }, {
-        id: '003',
-        imgUrl: 'https://imgs.qunarzz.com/sight/p0/1801/5d/5d24bb249f8ca889a3.water.jpg_200x200_77551cb9.jpg',
-        title: '澳门水舞间演出',
-        desc: '澳门特别行政区凼仔岛氹连贯公路新濠天地水舞间剧院'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
